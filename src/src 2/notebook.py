@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 IMAGE_SIZE = 256
 BATCH_SIZE = 32
 CHANNELS = 3
-EPOCHS = 50
+EPOCHS = 1
 dataset = tf.keras.utils.image_dataset_from_directory(
     "../../data/PlantVillage",
     shuffle=True,
@@ -124,14 +124,14 @@ val_loss = history.history['val_loss']
 
 plt.figure(figsize=(8, 8)) 
 plt.subplot(1, 2, 1)
-plt.plot(range (EPOCHS), acc, label='Training Accuracy') 
-plt.plot(range(EPOCHS), val_acc, Ilabel='Validation Accuracy') 
-plt.legend (loc='lower right')
+plt.plot(range(EPOCHS), acc, label='Training Accuracy') 
+plt.plot(range(EPOCHS), val_acc, label='Validation Accuracy') 
+plt.legend(loc='lower right')
 plt.title('Training and Validation Accuracy')
 
-plt.figure(figsize=(8 , 8 )) 
-plt.subplot(1 ,2 , 1)
-plt.plot(range(EPOCHS) , loss , label = 'Training Loss')
-plt.plot(range(EPOCHS) , val_loss , iLabel = 'Validation Loss')
-plt.legend(loc = 'Lower right')
-plt.title('Trainging and Validation Loss')
+plt.figure(figsize=(8, 8)) 
+plt.subplot(1, 2, 1)
+plt.plot(range(EPOCHS), loss, label='Training Loss')
+plt.plot(range(EPOCHS), val_loss, label='Validation Loss')
+plt.legend(loc='lower right')
+plt.title('Training and Validation Loss')
