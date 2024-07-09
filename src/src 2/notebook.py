@@ -119,3 +119,19 @@ print("Scores : ", scores)
 # assigning training plots
 acc = history.history['accuracy'] 
 val_acc = history.history['val_accuracy']
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+plt.figure(figsize=(8, 8)) 
+plt.subplot(1, 2, 1)
+plt.plot(range (EPOCHS), acc, label='Training Accuracy') 
+plt.plot(range(EPOCHS), val_acc, Ilabel='Validation Accuracy') 
+plt.legend (loc='lower right')
+plt.title('Training and Validation Accuracy')
+
+plt.figure(figsize=(8 , 8 )) 
+plt.subplot(1 ,2 , 1)
+plt.plot(range(EPOCHS) , loss , label = 'Training Loss')
+plt.plot(range(EPOCHS) , val_loss , iLabel = 'Validation Loss')
+plt.legend(loc = 'Lower right')
+plt.title('Trainging and Validation Loss')
