@@ -10,7 +10,7 @@ app = FastAPI()
 async def ping():
     return "Hello world!"
 
-def read_file_as_image(data ) -> np.ndarray  :
+
     
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
